@@ -46,8 +46,9 @@
     	<td>Apellidos</td>
     </tr>
     <tr>
+    	<td><?php echo $array['dni']; ?></td>
     	<?php
-    	echo "<td>" . $array['dni'] . "</td>";
+    	
     	echo "<td>" . $array['nombre'] . "</td>";
     	echo "<td>" . $array['apellido'] . "</td>";
     	?>

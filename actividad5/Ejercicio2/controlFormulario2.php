@@ -50,58 +50,7 @@ if (empty($_POST['estadoCivil'])) {
 }
 
 
-if (empty($_POST['cine'])) {
-    $cine="";
-}else {
-    $cine=$_POST['cine'];
-}
-if (empty($_POST['literatura'])) {
-    $literatura="";
-    
-}else {
-    $literatura=$_POST['literatura'];
-}
-if (empty($_POST['tebeos'])) {
-    $tebeos="";
-}else {
-    $tebeos=$_POST['tebeos'];
-}
-if (empty($_POST['deporte'])) {
-    $deporte="";
-}else {
-    $deporte=$_POST['deporte'];
-}
-if (empty($_POST['musica'])) {
-    $musica="";
-    
-}else {
-    $musica=$_POST['musica'];
-}
-if (empty($_POST['television'])) {
-    $television="";
-}else {
-    $television=$_POST['television'];
-}
 
-
-$aficionesRecibidas = array(
-    $cine,
-    $literatura,
-    $tebeos,
-    $deporte,
-    $musica,
-    $television
-);
-
-$aficiones = array();
-
-
-for ($i = 0; $i < count($aficionesRecibidas); $i++) {
-    if ($aficionesRecibidas[$i] != "") {
-        $aficiones[]=$aficionesRecibidas[$i];
-    }
-    
-}
 ?>
 
 
@@ -171,9 +120,12 @@ if ($estadoCivilBolean == false) {
 <br>
 <p>Sus aficiones son: <?php
 
+
+$aficiones = $_POST['aficiones'];
+
 for ($i = 0; $i < count($aficiones); $i ++) {
     
-    echo $aficiones[$i] . ", ";
+    echo  "<br>" . $aficiones[$i] . "," ;
 }
 ?></p>
 </html>

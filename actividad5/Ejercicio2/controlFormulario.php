@@ -111,7 +111,7 @@ for ($i = 0; $i < count($aficionesRecibidas); $i++) {
 </head>
 
 <body>
-</body>
+
 <?php
 
 if ($nombreBolean == false) {
@@ -175,4 +175,6 @@ for ($i = 0; $i < count($aficiones); $i ++) {
     echo "<b> " . $aficiones[$i] . ", </b>";
 }
 ?></p>
+<a href="datos2.html" target="_blank"/><p>Volver al Formulario</p>
+</body>
 </html>

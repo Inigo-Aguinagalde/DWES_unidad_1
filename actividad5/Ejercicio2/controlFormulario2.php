@@ -61,7 +61,7 @@ if (empty($_POST['estadoCivil'])) {
 </head>
 
 <body>
-</body>
+
 <?php
 
 if ($nombreBolean == false) {
@@ -128,4 +128,7 @@ for ($i = 0; $i < count($aficiones); $i ++) {
     echo  "<br>" . $aficiones[$i] . "," ;
 }
 ?></p>
+
+<a href="datos2.html" target="_blank"/><p>Volver al Formulario</p>
+</body>
 </html>

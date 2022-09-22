@@ -1,6 +1,9 @@
 <?php
 
-/*
+/*Tendremos los datos personales de 2 personas en 6 variables. Cada persona tendrá 3 datos:
+nombre, apellido y DNI.
+Hay que meter todos los datos en dos arrays ($usuario1, $usuario2) y después visualizarlos por pantalla en formato tabla.
+
  */
 
 	$dni1="44582369G";

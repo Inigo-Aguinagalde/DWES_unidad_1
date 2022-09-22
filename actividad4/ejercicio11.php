@@ -10,8 +10,7 @@
     print_r($semana);
     $suma=0;
     $media=0;
-    for($i=0;$i<count($semana);$i++){
-    }
+    
     
     foreach ($semana as $key => $value){
         

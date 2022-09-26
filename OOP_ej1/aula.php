@@ -88,13 +88,13 @@ class Aula extends Espacio{
         
     }
     
-    public function addOrdenadores(int $ordenadorres){
+    public function addOrdenadores(int $ordenadores){
         
         $puntoRed = parent::getPuntoRed();
         if ($puntoRed>count($ordenadores)) {
             for ($i = 0; $i < count($ordenadorres); $i++) {
                 $ordenadores = new $ordenador;
-                if ($puntoRed>count($ordenadores)) {
+                if ($puntoRed<=count($ordenadores)) {
                     echo "Se ha alcanzado el numero maximo de ordenadores del aula";
                     break;
                 }

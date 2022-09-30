@@ -26,22 +26,31 @@ $ordenador = new clOrdenador();
 $ordenador->setCodHZ($hz);
 $ordenador->setSO($so);
 $ordenador->setEsSobremesa($sobremesa);
-$existe;
+$existe=false;
+if ($jsonDecode==null) {
+    echo "El ordenador se ha guardado con exito";
+    $myJson = array(
+        "Sistema operativo" => $ordenador->getSO(),
+        "Identificador" => $ordenador->getCodHZ(),
+        "Sobremesa" =>$sobremesa
+    );
+    $existe=true;
+    $jsonDecode[] = $myJson;
+}else{
+    for ($i = 0; $i < count($jsonDecode); $i++) {
+        
+        if($jsonDecode[$i]['Identificador'] == $ordenador->getCodHZ()){
+            echo "No se puede guardar un ordenador previamente guardado";
+            $existe=true;
+            break;
+        }
+    }
+        
+}
+
 
 
 //Comprobar que el ordenador nuevo existe en el array
-for ($i = 0; $i < count($jsonDecode); $i++) {
-
-    if($jsonDecode[$i]['Identificador'] == $ordenador->getCodHZ()){
-        echo "No se puede guardar un ordenador previamente guardado";
-        $existe=true;
-        break;
-    }else{
-        $existe=false;
-      
-    }
-   
-}
 
 
 if ($existe!=true) {

@@ -1,8 +1,8 @@
 <?php
 
 class centro {
-    public $nombre=null;
-    public $codigo=null;
+    private $nombre=null;
+    private $codigo=null;
     /**
      * @return mixed
      */

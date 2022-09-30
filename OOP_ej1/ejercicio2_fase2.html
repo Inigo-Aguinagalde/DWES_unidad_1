@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--
+ Realizar una página web llamada calculadora.html . Se introducirán dos números y según el botón pulsado realizará la operación correspondiente:  
+Nota:
+- se deberá controlar que los números introducidos son enteros. Se indicará con un mensaje si no es así.
+- se controlará si se han enviado  los datos enviados mediante la función isset.
+- en caso de error se mantendrán los números en los textbox.
+
+  -->
+<html>
+<head>
+<title>Formulario</title>
+</head>
+
+<body>
+<h1>Datos del Ordenador(Formulario)</h1>
+<p>Formulario<p>
+	<form action="ejercicio2_fase2.php" method="post">
+	<p><b>Sistema operativo</b></p><input type="text" name="so">
+	<p><b>Nombre del equipo</b></p><input type="text" name="hz">
+	<p><b>Sobremesa</b></p><input type="radio"  id="esSobremesaSi" name="sobremesa" value="si">
+	<label for="esSobremesaSi">Si</label>
+	<input type="radio" id="esSobremesaNo" name="sobremesa" value="no">
+	<label for="esSobremesaNo">No</label>
+	<input type="submit">
+	</form>
+</body>
+
+</html>
+
+
+

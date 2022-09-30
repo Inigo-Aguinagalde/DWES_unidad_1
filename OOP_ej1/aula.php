@@ -80,7 +80,7 @@ class Aula extends Espacio{
    
         $puntoRed = parent::getPuntoRed();
         if ($puntoRed>count($ordenadores)) {
-            $ordenadores = new $ordenador ;
+            $ordenadores[] = new $ordenador ;
         }else{
             echo "Ya no quedan puntos de red";
         }
@@ -93,7 +93,7 @@ class Aula extends Espacio{
         $puntoRed = parent::getPuntoRed();
         if ($puntoRed>count($ordenadores)) {
             for ($i = 0; $i < count($ordenadorres); $i++) {
-                $ordenadores = new $ordenador;
+                $ordenadores[] = new $ordenador;
                 if ($puntoRed<=count($ordenadores)) {
                     echo "Se ha alcanzado el numero maximo de ordenadores del aula";
                     break;

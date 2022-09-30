@@ -2,8 +2,7 @@
 include 'ordenador.php';
 
 use Ordenador as clOrdenador;
-
-$ordenadores = array();
+$ordenadoresArchivo = "Ordenadores.json";
 
 
 $so = $_POST["so"];
@@ -18,19 +17,9 @@ if ($_POST['sobremesa']=="si") {
     $sobremesa=false;
 }
 
-$jsonData = file_get_contents('Ordenadores.json',true);
+$jsonData = file_get_contents($ordenadoresArchivo,true);
 
 $jsonDecode = json_decode($jsonData,true);
-
-
-
-
-$tieneDatos= empty($jsonDecode);
-
-
-
-
-
 
 $ordenador = new clOrdenador(); 
 
@@ -55,8 +44,6 @@ for ($i = 0; $i < count($jsonDecode); $i++) {
 }
 
 
-
-
 if ($existe!=true) {
     
     echo "El ordenador se ha guardado con exito";
@@ -70,15 +57,11 @@ if ($existe!=true) {
 }
 
 
-
-
-
 $myJson = json_encode($jsonDecode);
 
-
-
-
-$ordenadoresArchivo = "Ordenadores.json";
-
 file_put_contents($ordenadoresArchivo, $myJson);
+?>
+
+<br>
+<a href="ejercicio2_fase2.html"><button>Back</button>
 
